@@ -1,0 +1,98 @@
+:root {
+  color-scheme: dark;
+  --background: #0c1220;
+  --surface: #111a2b;
+  --text: #eef2f8;
+  --muted: #aebbd0;
+  --accent: #a5c8ff;
+  --line: #293449;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 2rem; }
+body { margin: 0; background: var(--background); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 1rem; line-height: 1.7; }
+a { color: var(--accent); text-underline-offset: .25em; }
+a:hover { color: #fff; }
+a:focus-visible { outline: 3px solid #bdd8ff; outline-offset: 6px; border-radius: 2px; }
+p { margin: 0 0 1rem; }
+h1, h2, h3 { line-height: 1.18; letter-spacing: -.035em; font-weight: 600; }
+h1 { font-size: clamp(2.8rem, 5.7vw, 4.75rem); margin: 0 0 1.7rem; }
+h2 { font-size: clamp(1.7rem, 3vw, 2.25rem); margin: 0 0 1.3rem; }
+h3 { font-size: 1.2rem; letter-spacing: -.02em; margin: 1rem 0 .7rem; }
+.wrap { max-width: 1160px; margin-inline: auto; padding-inline: 2.5rem; }
+.skip-link { position: absolute; top: -6rem; left: 1rem; z-index: 10; padding: .6rem 1rem; background: var(--text); color: var(--background); }
+.skip-link:focus { top: 1rem; color: var(--background); }
+.site-header { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { display: inline-flex; align-items: center; gap: .65rem; color: var(--text); text-decoration: none; font-size: 1.35rem; font-weight: 650; letter-spacing: -.035em; }
+.brand-mark { color: var(--accent); font-size: 1.85rem; line-height: 1; }
+nav { display: flex; flex-wrap: wrap; gap: 1.8rem; }
+nav a { color: var(--muted); text-decoration: none; font-size: .9rem; }
+nav a[aria-current="page"] { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); }
+.hero { position: relative; display: grid; grid-template-columns: 1.8fr 1fr; align-items: center; gap: 2rem; padding: 5.7rem 0 6.8rem; }
+.eyebrow { color: var(--accent); font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 650; margin-bottom: 1.6rem; }
+.hero h1 span { color: var(--accent); }
+.lead { max-width: 35rem; color: var(--muted); font-size: 1.12rem; line-height: 1.75; }
+.button { display: inline-flex; align-items: center; gap: 2.2rem; background: #bed6ff; color: #10223c; padding: .85rem 1.2rem; margin-top: 1rem; font-weight: 600; font-size: .88rem; text-decoration: none; border-radius: 4px; }
+.button:hover { color: #10223c; background: #d8e6ff; }
+.signal { width: 100%; aspect-ratio: 1; position: relative; max-width: 330px; justify-self: end; background: radial-gradient(circle, #1a2b4b 0, transparent 68%); }
+.signal-orbit { position: absolute; border: 1px solid #405676; border-radius: 50%; }
+.orbit-one { inset: 9%; }
+.orbit-two { inset: 25%; border-color: #657eab; }
+.signal-core { position: absolute; inset: 35%; display: grid; place-items: center; color: #c7dcff; font-size: 4rem; }
+.signal-point { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: #b9d4ff; }
+.point-one { top: 9%; left: calc(50% - 4px); }
+.point-two { top: 50%; right: calc(9% - 4px); }
+.signal-caption { position: absolute; bottom: -1.5rem; width: 100%; text-align: center; font-size: .6rem; letter-spacing: .22em; color: var(--muted); }
+.section { border-top: 1px solid var(--line); padding: 3.7rem 0; }
+.about, .outreach { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; }
+.about > div, .outreach > div { max-width: 42rem; }
+.section p:not(.eyebrow) { color: var(--muted); }
+.section-heading .eyebrow { margin-bottom: .85rem; }
+.focus-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; margin-top: 2.4rem; }
+.focus-grid article { padding-top: 1.3rem; border-top: 1px solid var(--line); }
+.area-number { color: var(--accent); font-size: .7rem; letter-spacing: .12em; }
+.focus-grid p { font-size: .92rem; margin: 0; }
+.text-link { display: inline-block; margin: .3rem 1.5rem .3rem 0; font-size: .9rem; }
+.contact { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.contact .eyebrow { margin-bottom: 1rem; }
+.contact h2 { margin-bottom: 0; }
+.contact-email { font-size: clamp(1rem, 2.2vw, 1.4rem); overflow-wrap: anywhere; }
+.site-footer { border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.6rem; padding-bottom: 1.6rem; color: var(--muted); font-size: .8rem; }
+.site-footer p { margin: 0; }
+.policy { max-width: 850px; padding-top: 3rem; padding-bottom: 4rem; }
+.policy-heading { padding-bottom: 2.5rem; border-bottom: 1px solid var(--line); }
+.policy h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem; }
+.policy-date { font-size: .85rem; color: var(--muted); margin-bottom: 1.6rem; }
+.policy section { padding-top: 2.4rem; }
+.policy section h2 { font-size: 1.45rem; letter-spacing: -.025em; }
+.policy section p { color: var(--muted); }
+.policy strong { color: var(--text); }
+code { font-size: .85em; background: var(--surface); padding: .15em .35em; border-radius: 3px; overflow-wrap: anywhere; }
+@media (max-width: 850px) {
+  .hero { grid-template-columns: 1fr; padding: 4rem 0; }
+  .signal { display: none; }
+  .focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .about, .outreach { grid-template-columns: 1fr; gap: .4rem; }
+  .contact { align-items: flex-start; flex-direction: column; gap: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .wrap { padding-inline: 1.25rem; }
+  .site-header { min-height: 88px; gap: .6rem; }
+  .brand { font-size: 1.13rem; gap: .4rem; }
+  .brand-mark { font-size: 1.5rem; }
+  nav { gap: 1rem; }
+  nav a { font-size: .85rem; }
+  .hero { padding: 3rem 0 3.7rem; }
+  .eyebrow { font-size: .65rem; }
+  .focus-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .section { padding: 2.6rem 0; }
+  .site-footer { flex-wrap: wrap; }
+  .policy { padding-top: 2rem; }
+}
+@media print {
+  :root { --text: #111; --muted: #333; --accent: #163d6b; --background: #fff; --line: #ccc; --surface: #eee; }
+  .signal, .skip-link { display: none; }
+  .wrap { max-width: none; padding-inline: 0; }
+  .hero { display: block; padding: 2rem 0; }
+  .section { padding: 1.5rem 0; }
+  .policy section { break-inside: avoid; }
+}
